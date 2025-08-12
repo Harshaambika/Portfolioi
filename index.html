@@ -1,53 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Harshambika S | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    * { box-sizing: border-box; }
+    html,body { height: 100%; margin: 0; }
+    body {
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+      background: linear-gradient(180deg,#f8fbff 0%, #f4f6fa 100%);
+      color: #222;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      scroll-behavior: smooth;
+    }
+    header {
+      text-align: center;
+      padding: 2.25rem 1rem;
+      background: linear-gradient(135deg,#4a90e2,#357abd);
+      color: #fff;
+    }
+    header h1 { margin: 0 0 .25rem 0; font-size: 1.8rem; }
+    header p { margin: 0; opacity: .95; }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      background: #222;
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      padding: .6rem 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: .95rem;
+      padding: 6px 10px;
+      border-radius: 6px;
+    }
+    nav a:hover { background: rgba(255,255,255,0.04); color: #dbeeff; }
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem 3rem 1rem;
+    }
+    section {
+      background: white;
+      border-radius: 12px;
+      padding: 1.4rem;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 6px 18px rgba(28,47,70,0.06);
+      opacity: 0;
+      transform: translateY(18px);
+      animation: fadeUp .7s ease forwards;
+    }
+    section:nth-of-type(1){ animation-delay: 0.05s; }
+    section:nth-of-type(2){ animation-delay: 0.10s; }
+    section:nth-of-type(3){ animation-delay: 0.15s; }
+    section h2 { margin: 0 0 .6rem 0; color: #2d6eb6; }
+    section p { margin: .25rem 0 1rem 0; color: #444; }
+    .project {
+      border-left: 5px solid #4a90e2;
+      padding: .9rem 1rem;
+      background: linear-gradient(180deg, rgba(240,244,255,1), white 60%);
+      border-radius: 8px;
+      margin-bottom: .9rem;
+    }
+    .project strong.title {
+      display: block;
+      font-size: 1.05rem;
+      color: #1f4f8a;
+      margin-bottom: .25rem;
+    }
+    .meta { color: #222; font-weight: 600; margin-top: .5rem; }
+    ul.features {
+      margin: .5rem 0 0 1rem;
+      padding: 0;
+      color: #444;
+    }
+    ul.features li { margin: .35rem 0; }
+    footer {
+      text-align: center;
+      padding: 1.1rem 1rem;
+      color: #fff;
+      background: #222;
+      border-top: 1px solid rgba(255,255,255,0.03);
+      margin-top: 1.5rem;
+    }
+    @media (min-width:900px){
+      header h1{ font-size: 2rem; }
+      nav { gap: 28px; padding: .75rem 1rem; }
+      section { padding: 1.6rem; }
+    }
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    code {
+      background: #f2f6ff;
+      padding: .12rem .35rem;
+      border-radius: 6px;
+      font-family: monospace;
+      font-size: .92rem;
+      color: #0b3a66;
+    }
+  </style>
 </head>
 <body>
+
   <header>
     <h1>Harshambika S</h1>
-    <p>Computer Science Student | Aspiring Software Developer</p>
+    <p>Computer Science Student • Aspiring Software Developer</p>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am a B.Tech CSE student with a passion for web development, Java programming, and building useful software projects.
-    </p>
-  </section>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <section id="education">
-    <h2>Education</h2>
-    <ul>
-      <li><strong>B.Tech in Computer Science</strong> – Presidency University (2023–2027)</li>
-      <li><strong>12th Grade</strong> – St Thomas School (2022)</li>
-    </ul>
-  </section>
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am a B.Tech CSE student with a passion for web development, Java programming, and building useful software projects.
+        I enjoy creating small full-stack apps and improving UX for simple tools.
+      </p>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>Budget Tracker App:</strong> A personal finance management tool built with Java.</li>
-      <li><strong>To-Do List Web App:</strong> Created using HTML, CSS, and JavaScript.</li>
-      <li><strong>Emergency Alert System:</strong> A unique safety app for kids (in progress).</li>
-    </ul>
-  </section>
+    <section id="education">
+      <h2>Education</h2>
+      <ul style="margin-left:1rem;">
+        <li><strong>B.Tech in Computer Science</strong> – Presidency University (2023–2027)</li>
+        <li><strong>12th Grade</strong> – St Thomas School (2022)</li>
+      </ul>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>
-      📧 Email: <a href="mailto:harshambika407@gmail.com">harshambika407@gmail.com</a><br>
-      🔗 GitHub: <a href="https://github.com/Harshaambika" target="_blank">github.com/Harshaambika</a><br>
-      🔗 LinkedIn: <a href="https://www.linkedin.com/in/harshambika-s-231a292b2/" target="_blank">linkedin.com/in/harshambika-s-231a292b2</a>
-    </p>
-  </section>
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div class="project">
+        <strong class="title">🎓 Student-Teacher Booking System</strong>
+        <p><strong>A simple web app that allows students to book appointments with teachers and view their scheduled meetings.</strong></p>
+        <div class="meta">🛠️ Tech Stack</div>
+        <ul class="features">
+          <li>Frontend: HTML, CSS, JavaScript</li>
+          <li>Backend/Database: Firebase Firestore</li>
+        </ul>
+        <div class="meta">📋 Features</div>
+        <ul class="features">
+          <li>🧑‍🎓 Book appointments with teacher name & time</li>
+          <li>📅 Store data using Firebase Firestore</li>
+          <li>🔍 View appointments by student name</li>
+          <li>🧠 Role selection system</li>
+        </ul>
+        <div class="meta">💡 How it works</div>
+        <p>Firebase is initialized in <code>script.js</code>. Appointment details are stored in Firestore and retrieved by student name.</p>
+      </div>
+
+      <div class="project">
+        <strong class="title">💰 Budget Tracker in Java</strong>
+        <p><strong>A console-based application to manage income, expenses, and track budget.</strong></p>
+        <div class="meta">📋 Features</div>
+        <ul class="features">
+          <li>➕ Add Income</li>
+          <li>➖ Add Expense</li>
+          <li>📜 View Transaction History</li>
+          <li>📊 View Current Balance</li>
+        </ul>
+        <div class="meta">🧠 Concepts used</div>
+        <ul class="features">
+          <li>Java OOP</li>
+          <li>ArrayList</li>
+          <li>Scanner</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        📧 Email: <a href="mailto:harshambika407@gmail.com" style="color:#1f5fb5;">harshambika407@gmail.com</a><br>
+        🔗 GitHub: <a href="https://github.com/Harshaambika" target="_blank" style="color:#1f5fb5;">github.com/Harshaambika</a><br>
+        🔗 LinkedIn: <a href="https://linkedin.com/in/harshambika-s-231a292b2" target="_blank" style="color:#1f5fb5;">linkedin.com/in/harshambika-s-231a292b2</a>
+      </p>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2025 Harshambika S. All rights reserved.</p>
+    © 2025 Harshambika S — All rights reserved.
   </footer>
+
+  <script>
+    const sections = document.querySelectorAll('main section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.style.opacity = '1'; });
+    }, { threshold: 0.18 });
+    sections.forEach(s => observer.observe(s));
+  </script>
+
 </body>
 </html>
+
+
 
