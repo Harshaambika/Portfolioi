@@ -14,4 +14,4 @@ Built with **HTML, CSS, and JavaScript**.
 
 ## Author
 **Harsha Ambika**  
-[LinkedIn](https://linkedin.com/in/your-link) | [GitHub](https://github.com/Harshaambika)
+ | [GitHub](https://github.com/Harshaambika)
