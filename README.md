@@ -10,8 +10,8 @@ Built with **HTML, CSS, and JavaScript**.
 - Responsive design  
 
 ## Live Demo
-[View on GitHub Pages](https://harshaambika.github.io/Portfolioi)
+ https://harshaambika.github.io/Portfolioi/
 
 ## Author
 **Harsha Ambika**  
- | [GitHub](https://github.com/Harshaambika)
+  [GitHub](https://github.com/Harshaambika)
